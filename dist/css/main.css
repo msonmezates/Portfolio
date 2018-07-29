@@ -8,6 +8,19 @@ body {
   margin: 0;
   line-height: 1.5;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+  body#bg-image {
+    background: url(../images/home.jpg);
+    background-size: cover;
+    background-attachment: fixed; }
+    body#bg-image:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
 
 h1, h2 {
   margin: 0;
