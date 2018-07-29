@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msonmezates/Portfolio.git"
+  },
+  "author": "Mehmet Sonmezates",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msonmezates/Portfolio/issues"
+  },
+  "homepage": "https://github.com/msonmezates/Portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.9.2"
+  }
+}
