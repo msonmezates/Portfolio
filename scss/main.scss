@@ -1,4 +1,5 @@
-@import 'config'; //import the sass variables
+@import 'config'; //import sass variables for main
+@import 'menu'; //import sass variables for menu
 
 // make sure everything stays in box-model
 * {

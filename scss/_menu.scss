@@ -1,0 +1,17 @@
+// Set menu button
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  @include easeOut; // mixin for transition
+
+  .menu-button-line {
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    @include easeOut;
+  }
+}
