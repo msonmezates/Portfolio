@@ -14,4 +14,24 @@
     background: #fff;
     @include easeOut;
   }
+
+  // Rotate menu with an X
+  &.close {
+    transform: rotate(180deg);
+    // make an X with lines
+    .menu-button-line {
+      // rotate first line and reposition
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      // hide the second line
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // rotate third line
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -5px); 
+      }
+    }
+  }
 }
