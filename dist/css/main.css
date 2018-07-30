@@ -52,6 +52,13 @@
     transition: all 0.6s ease-out; }
     .menu-image.show {
       transform: translate3d(0, 0, 0); }
+    .menu-image .portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../images/profilePic.png);
+      background-size: cover;
+      border-radius: 100%;
+      border: 2px solid #eece1a; }
 
 * {
   box-sizing: border-box; }
