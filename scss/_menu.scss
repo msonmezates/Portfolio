@@ -94,4 +94,21 @@
     }
   }
 
+  .nav-item {
+    // keep the list items at the right
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      // slide in from right
+      transform: translate3d(0, 0, 0);
+    }
+  }
+}
+
+// Delay each nav item slide by 0.1s
+@for $i from 1 through 4 {
+  .nav-item:nth-child(#{$i}) {
+    transition-delay: $i * 0.1s; // each of the item comes separately for every 0.1s
+  }
 }
