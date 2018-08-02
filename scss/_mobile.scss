@@ -46,6 +46,16 @@
       height: 120px;
     }
   }
+
+  .aboutMe-info {
+    grid-template-areas: 
+    'bioimage'
+    'bio'
+    'job1'
+    'job2'
+    'job3';
+    grid-template-columns: 1fr;
+  }
 }
 
 // Smart phones

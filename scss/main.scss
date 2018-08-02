@@ -1,6 +1,5 @@
 @import 'config'; //import sass variables for main
 @import 'menu'; //import sass variables for menu
-@import 'mobile'; //import sass variables for mobile
 
 // make sure everything stays in box-model
 * {
@@ -124,3 +123,5 @@ main {
   background: darken($primary-color, 10);
   color: setTextColor($primary-color);
 }
+
+@import 'mobile'; //import media queries for mobile. Media queries should be used after css therefore it's defined at the bottom.
