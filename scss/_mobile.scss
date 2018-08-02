@@ -1,11 +1,15 @@
 // Extra large laptops and desktops
 @include mediaXLarge {
-
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Laptops and desktops
 @include mediaLarge {
-
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 // Tablets & small laptops
@@ -56,12 +60,26 @@
     'job3';
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smart phones
 @include mediaSmall {
   main#home h1 {
+    margin-top: 20vh;
+    font-size: 4rem;
+  }
+
+  main#aboutMe h1,
+  main#myWork h1{
     margin-top: 10vh;
     font-size: 4rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
