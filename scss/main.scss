@@ -116,6 +116,49 @@ main {
   }
 }
 
+// My Work Page
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.8rem;
+
+  img {
+    width: 100%;
+    border: 3px solid #fff;
+
+    &:hover {
+      opacity: 0.6;
+      border-color: $secondary-color;
+      @include easeOut;
+    }
+  }
+}
+
+// Button styles
+.button {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.2rem;
+
+  &:hover {
+    background: $secondary-color;
+    color: setTextColor($secondary-color);
+  }
+}
+
+.button-dark {
+  @extend .button; //inherits from .button class
+  background: darken($primary-color, 50);
+}
+
+.button-light {
+  @extend .button; //inherits from .button class
+  background: lighten($primary-color, 50);
+  color: rgb(46, 44, 44);
+}
+
+// Footer setting
 #footer-main {
   text-align: center;
   padding: 1rem;
