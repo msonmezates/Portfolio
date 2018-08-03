@@ -201,11 +201,11 @@ main {
   .boxes div {
     font-size: 2rem;
     border: 3px solid #fff;
-    padding: 1rem 2rem;
+    padding: 2rem 4rem;
     margin-bottom: 2rem;
     transition: all 0.6s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1rem;
+      padding: 1rem 2rem;
       background: #eece1a;
       color: #000; }
       .boxes div:hover span {
@@ -250,11 +250,13 @@ main {
       line-height: 1;
       margin-bottom: 1rem;
       font-size: 5rem; }
-  ul.menu-nav, div.menu-image {
+  ul.menu-nav,
+  div.menu-image {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.menu-nav.show, div.menu-image.show {
+    ul.menu-nav.show,
+    div.menu-image.show {
       transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
@@ -267,10 +269,19 @@ main {
       width: 120px;
       height: 120px; }
   .aboutMe-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    font-size: 1.5rem;
+    padding: 1rem 2rem; }
+    .boxes div:hover {
+      padding: 0.5rem 1rem; }
+  main#contactMe h1 {
+    line-height: 1;
+    margin: 2rem 0;
+    font-size: 4rem; } }
 
 @media screen and (max-width: 480px) {
   main#home h1 {

@@ -25,7 +25,8 @@
     }
   }
 
-  ul.menu-nav, div.menu-image {
+  ul.menu-nav,
+  div.menu-image {
     float: none;
     width: 100%;
     min-height: 0;
@@ -52,17 +53,34 @@
   }
 
   .aboutMe-info {
-    grid-template-areas: 
-    'bioimage'
-    'bio'
-    'job1'
-    'job2'
-    'job3';
+    grid-template-areas:
+      "bioimage"
+      "bio"
+      "job1"
+      "job2"
+      "job3";
     grid-template-columns: 1fr;
   }
 
   .projects {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .boxes {
+    div {
+      font-size: 1.5rem;
+      padding: 1rem 2rem;
+
+      &:hover {
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+
+  main#contactMe h1 {
+    line-height: 1;
+    margin: 2rem 0;
+    font-size: 4rem;
   }
 }
 
@@ -74,7 +92,7 @@
   }
 
   main#aboutMe h1,
-  main#myWork h1{
+  main#myWork h1 {
     margin-top: 10vh;
     font-size: 4rem;
   }
