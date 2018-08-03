@@ -99,7 +99,7 @@ body {
   height: 100%;
   margin: 0;
   line-height: 1.5;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
   body#bg-image {
     background: url(../images/home.jpg);
     background-size: cover;
@@ -114,12 +114,15 @@ body {
       z-index: -1;
       background: rgba(68, 68, 68, 0.7); }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
   font-weight: 400; }
-  h1.fullname-heading, h2.fullname-heading {
+  h1.fullname-heading,
+  h2.fullname-heading {
     font-size: 6rem; }
-  h1.description-heading, h2.description-heading {
+  h1.description-heading,
+  h2.description-heading {
     background: rgba(73, 73, 73, 0.5);
     margin-bottom: 2rem;
     padding: 0.2rem 1rem; }
@@ -154,7 +157,7 @@ main {
 .aboutMe-info {
   display: grid;
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio'  'job1 job2 job3';
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .aboutMe-info .bio-image {
     grid-area: bioimage;
@@ -188,6 +191,25 @@ main {
       opacity: 0.6;
       border-color: #eece1a;
       transition: all 0.6s ease-out; }
+
+.boxes {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px solid #fff;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.6s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1rem;
+      background: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
 
 .button, .button-dark, .button-light {
   display: block;
