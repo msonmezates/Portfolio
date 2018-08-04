@@ -24,7 +24,7 @@
   position: fixed;
   width: 100%;
   top: 0;
-  opacity: 0.8;
+  opacity: 0.9;
   visibility: hidden; }
   .menu.show {
     visibility: visible; }
@@ -105,7 +105,7 @@ body {
     background-size: cover;
     background-attachment: fixed; }
     body#bg-image:after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       right: 0;
@@ -160,12 +160,14 @@ main {
   grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   grid-template-columns: repeat(3, 1fr); }
   .aboutMe-info .bio-image {
-    grid-area: bioimage;
     margin: auto;
-    border-radius: 100%;
-    border: #eece1a 3px solid;
+    grid-area: bioimage;
+    width: 250px;
     height: 250px;
-    width: 250px; }
+    background: url(../images/profilePic.png);
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid #eece1a; }
   .aboutMe-info .bio {
     grid-area: bio;
     font-size: 1.5rem; }

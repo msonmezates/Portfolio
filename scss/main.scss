@@ -87,12 +87,14 @@ main {
   grid-template-columns: repeat(3, 1fr);
 
   .bio-image {
-    grid-area: bioimage;
     margin: auto;
-    border-radius: 100%;
-    border: $secondary-color 3px solid;
-    height: 250px;
+    grid-area: bioimage;
     width: 250px;
+    height: 250px;
+    background: url(../images/profilePic.png);
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid $secondary-color;
   }
 
   .bio {
