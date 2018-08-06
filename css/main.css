@@ -1,0 +1,298 @@
+.menu-button {
+  position: absolute;
+  z-index: 3;
+  right: 30px;
+  top: 30px;
+  cursor: pointer;
+  transition: all 0.6s ease-out; }
+  .menu-button .menu-button-line {
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    transition: all 0.6s ease-out; }
+  .menu-button.close {
+    transform: rotate(180deg); }
+    .menu-button.close .menu-button-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px); }
+    .menu-button.close .menu-button-line:nth-child(2) {
+      opacity: 0; }
+    .menu-button.close .menu-button-line:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -5px); }
+
+.menu {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-image, .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden; }
+  .menu-nav {
+    margin: 0;
+    padding: 0;
+    background: #373737;
+    list-style-type: none;
+    transform: translate3d(0, -100%, 0);
+    transition: all 0.6s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-image {
+    background: #444;
+    transform: translate3d(0, 100%, 0);
+    transition: all 0.6s ease-out; }
+    .menu-image.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-image .portrait {
+      width: 250px;
+      height: 250px;
+      background: url(../images/profilePic.png);
+      background-size: cover;
+      border-radius: 100%;
+      border: 2px solid #eece1a; }
+  .menu .nav-item {
+    transform: translate3d(600px, 0, 0);
+    transition: all 0.6s ease-out; }
+    .menu .nav-item.show {
+      transform: translate3d(0, 0, 0); }
+    .menu .nav-item.current > a {
+      color: #eece1a; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 200;
+    color: #fff;
+    transition: all 0.6s ease-out; }
+    .menu .nav-link:hover {
+      color: #eece1a; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; }
+  body#bg-image {
+    background: url(../images/home.jpg);
+    background-size: cover;
+    background-attachment: fixed; }
+    body#bg-image:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(68, 68, 68, 0.7); }
+
+h1,
+h2 {
+  margin: 0;
+  font-weight: 400; }
+  h1.fullname-heading,
+  h2.fullname-heading {
+    font-size: 6rem; }
+  h1.description-heading,
+  h2.description-heading {
+    background: rgba(73, 73, 73, 0.5);
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+
+.text-secondary {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px); }
+  main .social-media-icons {
+    margin-top: 1rem; }
+    main .social-media-icons a {
+      padding: 0.3rem; }
+      main .social-media-icons a:hover {
+        color: #eece1a;
+        transition: all 0.6s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
+
+.aboutMe-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  grid-template-columns: repeat(3, 1fr); }
+  .aboutMe-info .bio-image {
+    margin: auto;
+    grid-area: bioimage;
+    width: 250px;
+    height: 250px;
+    background: url(../images/profilePic.png);
+    background-size: cover;
+    border-radius: 100%;
+    border: 3px solid #eece1a; }
+  .aboutMe-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+  .aboutMe-info .first-job {
+    grid-area: job1; }
+  .aboutMe-info .second-job {
+    grid-area: job2; }
+  .aboutMe-info .third-job {
+    grid-area: job3; }
+  .aboutMe-info .job {
+    background: #515151;
+    padding: 1rem;
+    border-bottom: 5px solid #eece1a; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.8rem; }
+  .projects img {
+    width: 100%;
+    height: 200px;
+    border: 3px solid #fff; }
+    .projects img:hover {
+      opacity: 0.6;
+      border-color: #eece1a;
+      transition: all 0.6s ease-out; }
+
+.boxes {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px solid #fff;
+    padding: 2rem 4rem;
+    margin-bottom: 2rem;
+    transition: all 0.6s ease-out; }
+    .boxes div:hover {
+      padding: 1rem 2rem;
+      background: #eece1a;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
+.button, .button-dark, .button-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.2rem; }
+  .button:hover, .button-dark:hover, .button-light:hover {
+    background: #eece1a;
+    color: #000; }
+
+.button-dark {
+  background: black; }
+
+.button-light {
+  background: #c4c4c4;
+  color: #2e2c2c; }
+
+#footer-main {
+  text-align: center;
+  padding: 1rem;
+  height: 60px;
+  background: #2b2b2b;
+  color: #fff; }
+
+@media screen and (min-width: 1024px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  .projects {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main#home h1 {
+      line-height: 1;
+      margin-bottom: 1rem;
+      font-size: 5rem; }
+  ul.menu-nav,
+  div.menu-image {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show,
+    div.menu-image.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 4rem; }
+  .menu-image {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-image .portrait {
+      width: 120px;
+      height: 120px; }
+  .aboutMe-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); }
+  .boxes div {
+    font-size: 1.5rem;
+    padding: 1rem 2rem; }
+    .boxes div:hover {
+      padding: 0.5rem 1rem; }
+  main#contactMe h1 {
+    line-height: 1;
+    margin: 2rem 0;
+    font-size: 4rem; } }
+
+@media screen and (max-width: 480px) {
+  main#home h1 {
+    margin-top: 20vh;
+    font-size: 4rem; }
+  main#aboutMe h1,
+  main#myWork h1 {
+    margin-top: 10vh;
+    font-size: 4rem; }
+  .projects {
+    grid-template-columns: 1fr; } }
