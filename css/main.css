@@ -301,5 +301,7 @@ main {
     grid-template-columns: 1fr; }
   .boxes div {
     padding: 1rem 1rem; }
+    .boxes div .text-secondary {
+      display: block; }
     .boxes div:hover {
       padding: 0.5rem 0.5rem; } }
