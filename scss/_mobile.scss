@@ -78,7 +78,8 @@
   }
 
   main#contactMe h1,
-  main#aboutMe h1 {
+  main#aboutMe h1,
+  main#myWork h1 {
     line-height: 1;
     margin: 2rem 0;
     font-size: 6rem;
@@ -98,7 +99,7 @@
   main#aboutMe h1,
   main#myWork h1,
   main#contactMe h1 {
-    margin-top: 10vh;
+    margin-top: 3vh;
     font-size: 4rem;
   }
 
