@@ -103,4 +103,12 @@
   .projects {
     grid-template-columns: 1fr;
   }
+
+  .boxes div {
+    padding: 1rem 1rem;
+
+    &:hover {
+      padding: 0.5rem 0.5rem;
+    }
+  }
 }

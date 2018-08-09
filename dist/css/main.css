@@ -298,4 +298,8 @@ main {
     margin-top: 10vh;
     font-size: 4rem; }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    padding: 1rem 1rem; }
+    .boxes div:hover {
+      padding: 0.5rem 0.5rem; } }
